@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Image Color Using Vanilla Js</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <span class="img-1 active" onclick="changeColor(event)"></span>
+      <i class="img-1"></i>
+
+      <span class="img-2" onclick="changeColor(event)"></span>
+      <i class="img-2"></i>
+
+      <span class="img-3" onclick="changeColor(event)"></span>
+      <i class="img-3"></i>
+
+      <span class="img-4" onclick="changeColor(event)"></span>
+      <i class="img-4"></i>
+      <span class="img-5" onclick="changeColor(event)"></span>
+      <i class="img-5"></i>
+      
+      <img src="photo.png" alt="">
+    </div>
+  </div>
+
+  <script>
+    function changeColor(event) {
+      //reset and remove active class first
+      document.querySelectorAll('span.active').forEach(function(item) {
+        item.classList.remove('active')
+      })
+      //add active Class to selected menu item
+      event.target.classList.add('active')
+    }
+  </script>
+</body>
+</html>
